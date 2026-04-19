@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    {% include head-custom.html %}
+    {% seo %}
+
+    <style>
+      .container {
+        max-width: 1200px;
+        margin-top: 15px;
+      }
+      main {
+        float: right;
+        width: 80%;
+      }
+      aside {
+        float: left;
+        width: 15%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <aside>
+        {% include navigation.html %}
+      </aside>
+      <main>
+        <h1>{{ page.title }}</h1>
+        {{ content }}
+      </main>
+    </div>
+  </body>
+</html>
