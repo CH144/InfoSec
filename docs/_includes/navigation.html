@@ -1,1 +1,7 @@
-<h3>menu</h3>
+<nav>
+  <ul>
+    {% for item in site.data.menu %}
+      {% include nav-item.html item=item %}
+    {% endfor %}
+  </ul>
+</nav>
