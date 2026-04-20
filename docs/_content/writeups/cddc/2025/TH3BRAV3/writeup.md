@@ -7,24 +7,24 @@ title: "TH3BRAV3"
 ### Architecture and protections
 The binary is x32, with no PIE and no canary:
 
-![](./images/checksec.png)
+<img src="./images/checksec.png" width="400">
 
 ### Static analysis
 `main()` has a vulnerable `gets()` at line 18:
 
-![](./images/main.png)
+<img src="./images/main.png" width="800">
 
 There is a `vuln()` which can read 8 bytes of user input to a specified address:
 
-![](./images/vuln.png)
+<img src="./images/vuln.png" width="400">
 
 There is a custom `system()` which calls the actual `system()` in libc:
 
-![](./images/system.png)
+<img src="./images/system.png" width="400">
 
 There is a global variable `buffer` in `.bss` that can hold 8 bytes:
 
-![](./images/buffer.png)
+<img src="./images/buffer.png" width="400">
 
 ### Exploit planning
 1. The addresses of `vuln()`, custom `system()` and `buffer` are known because PIE is disabled.
@@ -36,7 +36,7 @@ There is a global variable `buffer` in `.bss` that can hold 8 bytes:
 ### Exploit crafting
 Finding the pad length required:
 
-![](./images/pad.png)
+<img src="./images/pad.png" width="400">
 
 ### Exploit code
 ```python
@@ -65,4 +65,4 @@ p.interactive()
 ```
 
 ### Exploit success
-![](./images/shell.png)
+<img src="./images/shell.png" width="800">
