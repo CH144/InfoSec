@@ -56,7 +56,7 @@ Finding the pad length required:
 
 <img src="./images/pad.png" width="400">
 
-In this program, `local_2c` is the input buffer, while `local_c` is the canary. Therefore the full padding length is `0x2c - 0xc = 0x20 = 32`. However, the actual padding bytes will be fewer as part of the buffer is occupied by shellcode:
+In this program, `local_2c` is the input buffer, while `local_c` is the canary. Therefore the padding until the canary is `0x2c - 0xc = 0x20 = 32`. However, the actual padding bytes will be fewer as part of the buffer is occupied by shellcode:
 
 ```
 [shellcode][padding][canary ][padding][return address]
