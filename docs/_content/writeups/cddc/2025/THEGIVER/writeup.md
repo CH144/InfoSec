@@ -7,12 +7,12 @@ title: THEGIVER
 ### Architecture and protections
 The binary is x32 and has no canary:
 
-![](./images/checksec.png)
+<img src="./images/checksec.png" width="400">
 
 ### Static analysis
 `main()` leaks the runtime address of `system()` at line 14 and has a vulnerable `gets()` at line 17:
 
-![](./images/main.png)
+<img src="./images/main.png" width="800">
 
 ### Exploit planning
 1. Given the runtime address of `system()`, the runtime base of libc can be found.
@@ -23,11 +23,11 @@ The binary is x32 and has no canary:
 ### Exploit crafting
 Finding the pad length required:
 
-![](./images/pad.png)
+<img src="./images/pad.png" width="400">
 
 Finding the correct remote libc using [libc.rip](https://libc.rip) and the runtime `system()` leak:
 
-![](./images/libc.png)
+<img src="./images/libc.png" width="800">
 
 ### Exploit code
 ```python
@@ -64,4 +64,4 @@ p.interactive()
 ```
 
 ### Exploit success
-![](./images/shell.png)
+<img src="./images/shell.png" width="400">
