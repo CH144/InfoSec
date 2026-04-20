@@ -8,10 +8,6 @@
         - title: Shellcode
         - title: Return Oriented Programming
         - title: Heap Exploitation
-    - title: Reverse Engineering
-      children:
-    - title: Penetration Testing
-      children:
 
 - title: Writeups
   children:
