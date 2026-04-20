@@ -1,0 +1,23 @@
+- title: Home
+  link: /InfoSec/index.html
+
+- title: Notes
+  children:
+    - title: Binary Exploitation
+      children:
+        - title: Shellcode
+        - title: Return Oriented Programming
+        - title: Heap Exploitation
+    - title: Reverse Engineering
+      children:
+    - title: Penetration Testing
+      children:
+
+- title: Writeups
+  children:
+    - title: CDDC 2025
+      children:
+        - title: Overview
+          link: /InfoSec/content/writeups/cddc/2025/overview.html
+        - title: TH3BRAV3
+          link: /InfoSec/content/writeups/cddc/2025/TH3BRAV3/writeup.html
