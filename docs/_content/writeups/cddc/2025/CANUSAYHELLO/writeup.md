@@ -12,15 +12,15 @@ The binary is x32, with executable stack, but also with canary.
 ### Static analysis
 `main()` leaks the address of the start of the input buffer at line 46, and has a vulnerable `gets()` at line 63, accessible by choosing option 3:
 
-<img src="./images/main.png" width="400">
+<img src="./images/main.png" width="600">
 
 `Rename()`, accessible by choosing option 1, takes the input and stores it at the global variable `name`:
 
-<img src="./images/rename.png" width="400">
+<img src="./images/rename.png" width="600">
 
 `Greeting()`, accessible by choosing option 2, has a vulnerable `printf()` at line 12 which prints the global variable `name`:
 
-<img src="./images/greeting.png" width="400">
+<img src="./images/greeting.png" width="600">
 
 ### Exploit planning
 1. Use the looping feature to repeatedly set `name` (option 1) to the form `%i$p`, where `i` is a positive integer, then leak diffent stack values via `printf()` (option 2), until the `i` that leaks the canary is found.

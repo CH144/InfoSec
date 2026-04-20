@@ -20,11 +20,11 @@ There is a `vuln()` which can read 8 bytes of user input to a specified address:
 
 There is a custom `system()` which calls the actual `system()` in libc:
 
-<img src="./images/system.png" width="400">
+<img src="./images/system.png" width="600">
 
 There is a global variable `buffer` in `.bss` that can hold 8 bytes:
 
-<img src="./images/buffer.png" width="400">
+<img src="./images/buffer.png" width="600">
 
 ### Exploit planning
 1. The addresses of `vuln()`, custom `system()` and `buffer` are known because PIE is disabled.

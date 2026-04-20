@@ -23,7 +23,7 @@ To aid interpretation of the code, a struct can be created:
 6. Save with the floppy disk icon.
 7. Change the type of the relevant variables to `struct*`.
 
-<img src="./images/struct.png" width="800">
+<img src="./images/struct.png" width="600">
 
 `main()` has vulnerable `strcpy()` at lines 22 and 24, which will copy until `\x00` regardless of overflow. The progam also ends with `exit()` instead of `return`.
 
@@ -57,10 +57,10 @@ Looking around the other `FUN`, one of them prints the flag. It is recommended t
 By observation, 40 bytes are needed before the `puVar2->address` is overwritten.
 
 #### Finding address of `exit@got.plt`:
-<img src="./images/exit_got.png" width="400">
+<img src="./images/exit_got.png" width="600">
 
 #### Finding address of `win()`:
-<img src="./images/win_adr.png" width="400">
+<img src="./images/win_adr.png" width="600">
 
 ### Exploit code
 ```python
