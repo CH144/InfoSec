@@ -46,6 +46,10 @@
           link: /InfoSec/content/writeups/cddc/2025/CALL_OF_THE_SYSTEMS2/writeup.html
         - title: GOODLUCK
           link: /InfoSec/content/writeups/cddc/2025/GOODLUCK/writeup.html
+    - title: TISC @ DEFCON SG 2026
+      children:
+        - title: Phantom Tracer
+          link: /InfoSec/content/writeups/tisc/phantom_tracer/writeup.html
     - title: Miscellaneous
       children:
         - title: Format String Write
