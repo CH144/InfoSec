@@ -5,9 +5,24 @@
   children:
     - title: Binary Exploitation
       children:
+        - title: Assembly
         - title: Shellcode
+          children:
+            - title: Writing Shellcode
+              link: /InfoSec/content/notes/pwn/shellcode/writing_shellcode.html
+            - title: Bypassing Filters
+              link: /InfoSec/content/notes/pwn/shellcode/bypassing_filters.html
+            - title: Beyond Shells
+              link: /InfoSec/content/notes/pwn/shellcode/beyond_shells.html
         - title: Return Oriented Programming
         - title: Heap Exploitation
+          children:
+            - title: Tcache Primer
+              link: /InfoSec/content/notes/pwn/heap/tcache_primer.html
+            - title: Tcache Vulnerabilities
+              link: /InfoSec/content/notes/pwn/heap/tcache_vulnerabilities.html
+            - title: Tcache Safe Linking
+              link: /InfoSec/content/notes/pwn/heap/tcache_safe_linking.html
 
 - title: Writeups
   children:
