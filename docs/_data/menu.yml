@@ -31,4 +31,7 @@
           link: /InfoSec/content/writeups/cddc/2025/CALL_OF_THE_SYSTEMS2/writeup.html
         - title: GOODLUCK
           link: /InfoSec/content/writeups/cddc/2025/GOODLUCK/writeup.html
-
+    - title: Miscellaneous
+      children:
+        - title: Format String Write
+          link: /InfoSec/content/writeups/misc/format_string_write/writeup.html
