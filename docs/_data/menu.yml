@@ -5,7 +5,8 @@
   children:
     - title: Binary Exploitation
       children:
-        - title: Assembly
+        - title: Using Checksec
+          link: /InfoSec/content/notes/pwn/checksec.html
         - title: Shellcode
           children:
             - title: Writing Shellcode
@@ -15,6 +16,11 @@
             - title: Beyond Shells
               link: /InfoSec/content/notes/pwn/shellcode/beyond_shells.html
         - title: Return Oriented Programming
+          children:
+            - title: ROP Primer
+              link: /InfoSec/content/notes/pwn/rop/rop_primer.html
+            - title: ROP Techniques
+              link: /InfoSec/content/notes/pwn/rop/rop_techniques.html
         - title: Heap Exploitation
           children:
             - title: Tcache Primer
